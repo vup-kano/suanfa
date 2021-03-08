@@ -38,7 +38,7 @@ void prime(graph g,int s)//最小生成树
     int dst[Len];
     int st;
     int minx;
-
+    int sum=0;
     for (int i=0;i<g->nv;++i){
         dst[i]=g->data[s][i];
     }
@@ -55,6 +55,7 @@ void prime(graph g,int s)//最小生成树
         }
         g->visited[st]=1;
         printf("V%c ",zd[st]);
+        sum=sum+minx;
         for (int j=0;j<g->nv;++j){
             if(g->visited[j]==0&&dst[j]>g->data[st][j]){
                 dst[j]=g->data[st][j];
@@ -62,7 +63,7 @@ void prime(graph g,int s)//最小生成树
 
         }
     }
-    printf("\n");
+    printf("\nthe lowest weight=%d\n",sum);
 }
 int main (){
     int a,b,s,e,pow,n,m;
