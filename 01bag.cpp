@@ -12,7 +12,7 @@ int main() {
 	for(int i = 0; i < n; i++)
 		scanf("%d %d", &v[i], &w[i]);
 	for(int i = 0; i < n; i++){
-		for(int j = 0; j < m; ++j){
+		for(int j = 0; j <= m; ++j){
 			if(j >= w[i]){
 			    dp[j] = max(dp[j], dp[j - w[i]] + v[i]);
 			}
