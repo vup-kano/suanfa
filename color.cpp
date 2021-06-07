@@ -49,11 +49,11 @@ int main(){
     printf("color:");
     color=sc();//输入颜色数
     while(scanf("%d %d",&a,&b)!=EOF){
-		if(a==0&&b==0){
-			break;
-		}
+	if(a==0&&b==0){
+		break;
+	}
         num[a][b]=1;
-		num[b][a]=1;
+	num[b][a]=1;
 	}
     backtrack(1);
     if(cou==0)
